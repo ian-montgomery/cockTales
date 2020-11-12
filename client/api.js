@@ -11,7 +11,7 @@ const taleURL = '/api/drinks/'
 //external
 export function getCocktail (alcohol) {
     return request
-    .get(cocktailURL)
+    .get(cocktailURL + alcohol)
     .then (response => response.body.idDrink)
     .then (idDrink => getRecipe(idDrink))
     }

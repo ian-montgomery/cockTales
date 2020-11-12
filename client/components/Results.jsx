@@ -1,5 +1,6 @@
 import React from 'react'
-import {getTale} from '../api'
+import {getTale, getRecipe, getCocktail} from '../api'
+
 
 
 class Results extends React.Component {
@@ -9,6 +10,7 @@ class Results extends React.Component {
 
   componentDidMount = () => {
     this.getAlcInfo(this.props.alcohol)
+    this.getCocktail(this.props.alcohol)
   }
 
 
@@ -20,6 +22,17 @@ class Results extends React.Component {
         })
       })
   }
+
+  getRecipe = (alcohol) => {
+    getRecipe
+  }
+
+  getCocktail = (alcohol) => {
+    getCocktail(alcohol)
+      .then((res) => console.log(res))
+  }
+
+  
 
   render () {
     return (
