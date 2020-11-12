@@ -9,25 +9,34 @@ const taleURL = '/api/drinks/'
 //functions 
 
 //external
-export function getCocktail (alcohol) {
-    return request
-    .get(cocktailURL + alcohol)
-    .then (response => response.body.idDrink)
-    .then (idDrink => getRecipe(idDrink))
+export function getCocktailApi (alcohol) {
+  return getCocktailsList(alcohol)
+    .then (drinksArr => {
+      return (drinksArr[getRandomInt(drinksArr.length)])
+    })
     }
 
+function getCocktailsList (alcohol) {
+  return request
+    .get(cocktailURL + alcohol)
+    .then (response => response.body.drinks)
+}
 
-export function getRecipe (id) {
-    return request
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max))
+}
+
+
+export function getRecipeApi (id) {
+  return request
     .get(recipeURL + id)
-    .then (response => response.body)
+    .then (response => response.body.drinks[0])
 }
 
 
 
 //local
-export function getTale (alcohol) {
-  console.log("getTale called")
+export function getTaleApi (alcohol) {
     return request
     .get(taleURL + alcohol)
     .then(response => response.body)
