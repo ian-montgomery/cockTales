@@ -7,6 +7,8 @@ const taleURL = '/api/drinks/'
 
 
 //functions 
+
+//external
 export function getCocktail (alcohol) {
     return request
     .get(cocktailURL)
@@ -21,7 +23,11 @@ export function getRecipe (id) {
     .then (response => response.body)
 }
 
+
+
+//local
 export function getTale (alcohol) {
+  console.log("getTale called")
     return request
     .get(taleURL + alcohol)
     .then(response => response.body)
