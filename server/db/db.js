@@ -4,7 +4,7 @@ const db = require('knex')(config)
 function getTale(drink) {
     return db('drinks')
         .where('name', drink)
-        .first()
+        .select('*')
 }
 
 module.exports = {
