@@ -3,7 +3,7 @@ import request from 'superagent'
 //api url for cocktail recipes
 const cocktailURL = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='
 const recipeURL = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
-const taleURL = ''
+const taleURL = '/api/drinks/'
 
 
 //functions 
@@ -23,6 +23,6 @@ export function getRecipe (id) {
 
 export function getTale (alcohol) {
     return request
-    .get(taleURL)
+    .get(taleURL + alcohol)
     .then(response => response.body)
 }
