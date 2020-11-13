@@ -113,36 +113,36 @@ exports.seed = function (knex) {
         },
         {
           id: 19,
-          name: "Whisky",
+          name: "Whiskey",
           tale: "“Whiskey” is a Gaelic word which means “water of life.”",
         },
         {
           id: 20,
-          name: "Whisky",
+          name: "Whiskey",
           tale:
             "In 1830, American consumption of alcohol, per capita, was insane. It peaked at what is roughly 1.7 bottles of standard strength whiskey, per person, per week or 88 bottles a year.",
         },
         {
           id: 21,
-          name: "Whisky",
+          name: "Whiskey",
           tale:
             "Nikola Tesla drank Whiskey every day because he supposed it would make him live to 150.",
         },
         {
           id: 22,
-          name: "Whisky",
+          name: "Whiskey",
           tale:
             "An incredible one billion bottles of scotch are exported from Scotland every year.",
         },
         {
           id: 23,
-          name: "Whisky",
+          name: "Whiskey",
           tale:
             "The earliest known record of Whiskey production dates back to 1494.",
         },
         {
           id: 24,
-          name: "Whisky",
+          name: "Whiskey",
           tale:
             "The evaporation of Alcohol from a Whiskey barrel during maturation is referred to as the ‘Angel’s Share’.",
         },
